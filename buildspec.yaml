@@ -8,7 +8,7 @@ phases:
       - apt-get install zip -y
   build:
     commands:
-      - zip -r output_file.zip /
+      - zip -r output_file.zip *
       - zip -r output2.zip  /magento2test
 artifacts:
   files:
