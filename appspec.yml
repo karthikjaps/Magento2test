@@ -1,5 +1,18 @@
-version: 4.2
+version: 0.0
 os: linux
 files:
   - source: /
     destination: /var/www/html/
+hooks:
+  BeforeInstall:
+  - location: /stop_app.sh
+    timeout: 200
+    runas: root
+  AfterInstall:
+  - location: /build_dep.sh
+    timeout: 200
+    runas: root
+  ApplicationStart:
+    - location: /start_server.sh
+      timeout: 30
+      runas: root
