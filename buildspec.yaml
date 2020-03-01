@@ -6,6 +6,7 @@ phases:
       nodejs: 10
     commands:
       - apt-get install zip -y
+      - echo "install complte"
   build:
     commands:
       - zip -r output_file.zip *
