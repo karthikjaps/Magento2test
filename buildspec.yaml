@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+    commands:
+      - apt-get install zip -y
+  build:
+    commands:
+      - zip -r output_file.zip /
+      -zip  -r output2.zip  /magento2test
+artifacts:
+  files:
+    - '**/*'
